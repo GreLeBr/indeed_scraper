@@ -1,74 +1,22 @@
-# Data analysis
-- Document here the project: indeed_scraper
-- Description: Project Description
-- Data Source:
-- Type of analysis:
+# Scrapper for indeed.com 
+Harvest the job_id, the url of the offer, company name, the title of the job, the job description and the company URL if it exists. 
 
-Please document the project the better you can.
+# Installation: 
+You need python and pandas
+download the package and move to the decompressed directory run:
+`pip install -e .`
 
-# Startup the project
+To use the script run (with options):
+`indeed_scraper-run`
+Options are :
+* --d or --dir -> to specify the location of the output file if you want it somewhere else
+* --j or --job -> to specify the keyword related to the job you are looking for, it can be left empty
+* --l or --loc -> to specify the location you want the job search to be operated, it can be left empty
+* --p or --page -> to specify how many pages you want to search for the query you are using
 
-The initial setup.
+so for example:
+`indeed_scraper-run --j data`
 
-Create virtualenv and install the project:
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv ~/venv ; source ~/venv/bin/activate ;\
-    pip install pip -U; pip install -r requirements.txt
-```
+By default it creates a output.csv in the folder you run the script
+`
 
-Unittest test:
-```bash
-make clean install test
-```
-
-Check for indeed_scraper in gitlab.com/{group}.
-If your project is not set please add it:
-
-- Create a new project on `gitlab.com/{group}/indeed_scraper`
-- Then populate it:
-
-```bash
-##   e.g. if group is "{group}" and project_name is "indeed_scraper"
-git remote add origin git@github.com:{group}/indeed_scraper.git
-git push -u origin master
-git push -u origin --tags
-```
-
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-indeed_scraper-run
-```
-
-# Install
-
-Go to `https://github.com/{group}/indeed_scraper` to see the project, manage issues,
-setup you ssh public key, ...
-
-Create a python3 virtualenv and activate it:
-
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv -ppython3 ~/venv ; source ~/venv/bin/activate
-```
-
-Clone the project and install it:
-
-```bash
-git clone git@github.com:{group}/indeed_scraper.git
-cd indeed_scraper
-pip install -r requirements.txt
-make clean install test                # install and test
-```
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-indeed_scraper-run
-```
