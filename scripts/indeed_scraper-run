@@ -170,4 +170,4 @@ if __name__ == '__main__':
     search_word=args.j
     search_location=args.l
     page_scraped=args.p
-    job_offer_scrapper_indeed(str(filename),str(search_word),str(search_location),page_scraped)
+    job_offer_scrapper_indeed(str(filename),str(search_word),str(search_location),int(page_scraped))
